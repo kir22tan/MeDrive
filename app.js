@@ -8,6 +8,8 @@ const dbconnect = require('./config/db');
 const verifyToken = require('./middleware/auth');
 const uploadRoute = require('./routes/upload.route'); //  NEW: Upload system
 
+const PORT = process.env.PORT || 8080;
+
 dotenv.config();
 
 const app = express();
@@ -41,6 +43,6 @@ app.use('/', authRoute);
 // Upload route mounting
 app.use('/upload', uploadRoute);
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
     console.log(`listening to port ${process.env.PORT}`);
 });
