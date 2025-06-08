@@ -1,16 +1,16 @@
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.successMsg) {
+    alert(window.successMsg);
+  }
+});
+
 const slides = document.querySelectorAll('.slide');
 let current = 0;
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-}
-
-function nextSlide() {
+function showNextSlide() {
+  slides[current].classList.toggle('active');
   current = (current + 1) % slides.length;
-  showSlide(current);
+  slides[current].classList.toggle('active');
 }
 
-// Start slideshow with 5-second interval
-setInterval(nextSlide, 5000);
+setInterval(showNextSlide, 3000);

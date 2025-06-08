@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vaulta | Login</title>
+  <link rel="stylesheet" href="/login.css" />
+</head>
+<body>
+
+  <!-- Header with Home and Register -->
+  <div class="header">
+    <form action="/" method="GET">
+      <button class="btn home-btn" type="submit">Home</button>
+    </form>
+    <form action="/registerpage" method="GET">
+      <button class="btn signup-btn" type="submit">Register</button>
+    </form>
+  </div>
+
+  <!-- Login Form Box -->
+  <div class="form-container">
+    <h2>Login to Your Account</h2>
+    <form action="/login" method="POST" id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+      <button type="submit" class="btn submit-btn">Login</button>
+    </form>
+  </div>
+
+</body>
+</html>

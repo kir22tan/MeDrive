@@ -1,0 +1,170 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('../my_multimedia/home_bg2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fefefe;
+  margin: 0;
+  padding: 0 2rem;
+  overflow-y: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(91, 91, 91, 0.4);
+}
+
+h1 {    
+  color: #ffffff; /* main blue */
+  margin: 0;
+}
+
+/* Buttons */
+.logout-btn {
+  background-color: #d63031; /* red */
+  border: none;
+  color: #fefefe; /* light text */
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #b02a28; /* darker red */
+}
+
+/* Upload Section */
+#upload-section {
+  margin-top: 2rem;
+  background-color: rgba(20, 83, 116, 0.7); /* semi-transparent dark blue */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Drag & Drop Area */
+#drop-area {
+  border: 2px dashed #627d9f; /* dashed blue-gray */
+  border-radius: 6px;
+  padding: 3rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.1); /* translucent white */
+  color: #fefefe;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#drop-area.dragover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: #1f6f8b; /* lighter blue */
+}
+
+/* File Select Button */
+#fileSelectBtn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #145374; /* main blue */
+  border: none;
+  color: #fefefe;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+#fileSelectBtn:hover {
+  background-color: #1f6f8b; /* lighter blue */
+}
+
+/* Upload Button */
+#uploadBtn {
+  background-color: #0984e3; /* bright blue */
+  border: none;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  color: #fefefe;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#uploadBtn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Files List */
+#files-list {
+  margin-top: 3rem;
+}
+
+#uploadedFiles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.file-item {
+  background-color: rgba(20, 83, 116, 0.6); /* slightly lighter overlay */
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fefefe;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  user-select: text;
+}
+
+.file-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 70%;
+}
+
+.file-format {
+  background-color: #627d9f; /* border blue */
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Scrollbar styling */
+/* body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #145374; 
+  border-radius: 10px;
+  border: 3px solid transparent;
+} */
+
+/* Drag & Drop Area states */
+#drop-area.uploading {
+  background-color: rgba(40, 110, 40, 0.5); /* darker green tint */
+  border-color: #2e7d32;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#drop-area.success {
+  background-color: rgba(56, 142, 60, 0.3); /* lighter green tint */
+  border-color: #388e3c;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}

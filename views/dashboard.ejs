@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vaulta - Dashboard</title>
+  <link rel="stylesheet" href="/dashboard.css" />
+</head>
+<body>
+  <header>
+    <h1>Vaulta Dashboard</h1>
+    <form action="/logout" method="POST">
+      <button class="btn logout-btn" type="submit">Logout</button>
+    </form>
+  </header>
+
+  <main>
+    <section id="upload-section">
+      <div id="drop-area">
+        <p>Drag & drop files here</p>
+        <input type="file" id="fileElem" multiple hidden />
+        <button id="fileSelectBtn">Select Files</button>
+      </div>
+      <button id="uploadBtn" disabled>Upload</button>
+    </section>
+
+    <section id="files-list">
+      <h2>Uploaded Files</h2>
+      <div id="uploadedFiles"></div>
+    </section>
+  </main>
+
+  <script src="/dashboard.js"></script>
+</body>
+</html>
